@@ -101,110 +101,110 @@ edgex:
   image:
     core:
       common_config:
-        repository: edgexfoundry/core-common-config-bootstrapper
+        repository: nexus3.edgexfoundry.org:10004/core-common-config-bootstrapper
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       command:
-        repository: edgexfoundry/core-command
+        repository: nexus3.edgexfoundry.org:10004/core-command
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       data:
-        repository: edgexfoundry/core-data
+        repository: nexus3.edgexfoundry.org:10004/core-data
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       metadata:
-        repository: edgexfoundry/core-metadata
+        repository: nexus3.edgexfoundry.org:10004/core-metadata
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     support:
       notifications:
-        repository: edgexfoundry/support-notifications
+        repository: nexus3.edgexfoundry.org:10004/support-notifications
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       scheduler:
-        repository: edgexfoundry/support-scheduler
+        repository: nexus3.edgexfoundry.org:10004/support-scheduler
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     appservice:
       rules:
-        repository: edgexfoundry/app-service-configurable
+        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       appsample:
-        repository: edgexfoundry/app-service-configurable
+        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       apprecordreplay:
-        repository: edgexfoundry/app-record-replay
+        repository: nexus3.edgexfoundry.org:10004/app-record-replay
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       metricsinfluxdb:
-        repository: edgexfoundry/app-service-configurable
+        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rfidllrpinventory:
-        repository: edgexfoundry/app-rfid-llrp-inventory
+        repository: nexus3.edgexfoundry.org:10004/app-rfid-llrp-inventory
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       mqttexport:
-        repository: edgexfoundry/app-service-configurable
+        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       httpexport:
-        repository: edgexfoundry/app-service-configurable
+        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       externalmqtttrigger:
-        repository: edgexfoundry/app-service-configurable
+        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     device:
       virtual:
-        repository: edgexfoundry/device-virtual
+        repository: nexus3.edgexfoundry.org:10004/device-virtual
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rest:
-        repository: edgexfoundry/device-rest
+        repository: nexus3.edgexfoundry.org:10004/device-rest
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       onvifcamera:
-        repository: edgexfoundry/device-onvif-camera
+        repository: nexus3.edgexfoundry.org:10004/device-onvif-camera
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       usbcamera:
-        repository: edgexfoundry/device-usb-camera
+        repository: nexus3.edgexfoundry.org:10004/device-usb-camera
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       mqtt:
-        repository: edgexfoundry/device-mqtt
+        repository: nexus3.edgexfoundry.org:10004/device-mqtt
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       modbus:
-        repository: edgexfoundry/device-modbus
+        repository: nexus3.edgexfoundry.org:10004/device-modbus
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       bacnet:
-        repository: edgexfoundry/device-bacnet
+        repository: nexus3.edgexfoundry.org:10004/device-bacnet
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       coap:
-        repository: edgexfoundry/device-coap
+        repository: nexus3.edgexfoundry.org:10004/device-coap
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       snmp:
-        repository: edgexfoundry/device-snmp
+        repository: nexus3.edgexfoundry.org:10004/device-snmp
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rfidllrp:
-        repository: edgexfoundry/device-rfid-llrp
+        repository: nexus3.edgexfoundry.org:10004/device-rfid-llrp
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       gpio:
-        repository: edgexfoundry/device-gpio
+        repository: nexus3.edgexfoundry.org:10004/device-gpio
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     ui:
-      repository: edgexfoundry/edgex-ui
+      repository: nexus3.edgexfoundry.org:10004/edgex-ui
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     consul:
@@ -224,15 +224,15 @@ edgex:
       tag: "1.14.5"
       pullPolicy: IfNotPresent
     bootstrapper:
-      repository: edgexfoundry/security-bootstrapper
+      repository: nexus3.edgexfoundry.org:10004/security-bootstrapper
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     proxysetup:
-      repository: edgexfoundry/security-proxy-setup
+      repository: nexus3.edgexfoundry.org:10004/security-proxy-setup
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     secretstoresetup:
-      repository: edgexfoundry/security-secretstore-setup
+      repository: nexus3.edgexfoundry.org:10004/security-secretstore-setup
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     modbussimulator:
