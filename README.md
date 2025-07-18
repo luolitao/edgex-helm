@@ -54,10 +54,10 @@ You can install the helm chart 1 of 2 ways.
 
 **If you want to clone the entire edgex-helm repository:**
 ```bash
-$ git clone https://github.com/edgexfoundry/edgex-helm.git
-$ git checkout v3.0
+$ git clone https://github.com/luolitao/edgex-helm.git
+$ git checkout v4.0
 $ kubectl create namespace edgex
-$ helm install edgex-napa -n edgex .
+$ helm install edgex-odessa -n edgex .
 ```
 
 **If you are only interested in installing the helm chart as a standalone:**
