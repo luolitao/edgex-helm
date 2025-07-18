@@ -86,12 +86,12 @@ You can now change to the unzipped directory and install the helm chart.
 ```console
 cd helm
 kubectl create namespace edgex
-helm install edgex-napa -n edgex .
+helm install edgex-odessa -n edgex .
 ```
 ## Uninstallation
 
 ```bash
-helm uninstall edgex-napa -n edgex
+helm uninstall edgex-odessa -n edgex
 ```
 
 ## Test EdgeX
