@@ -101,110 +101,110 @@ edgex:
   image:
     core:
       common_config:
-        repository: nexus3.edgexfoundry.org:10004/core-common-config-bootstrapper
+        repository: dockerproxy.net/edgexfoundry/core-common-config-bootstrapper
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       command:
-        repository: nexus3.edgexfoundry.org:10004/core-command
+        repository: dockerproxy.net/edgexfoundry/core-command
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       data:
-        repository: nexus3.edgexfoundry.org:10004/core-data
+        repository: dockerproxy.net/edgexfoundry/core-data
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       metadata:
-        repository: nexus3.edgexfoundry.org:10004/core-metadata
+        repository: dockerproxy.net/edgexfoundry/core-metadata
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     support:
       notifications:
-        repository: nexus3.edgexfoundry.org:10004/support-notifications
+        repository: dockerproxy.net/edgexfoundry/support-notifications
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       scheduler:
-        repository: nexus3.edgexfoundry.org:10004/support-scheduler
+        repository: dockerproxy.net/edgexfoundry/support-scheduler
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     appservice:
       rules:
-        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
+        repository: dockerproxy.net/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       appsample:
-        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
+        repository: dockerproxy.net/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       apprecordreplay:
-        repository: nexus3.edgexfoundry.org:10004/app-record-replay
+        repository: dockerproxy.net/edgexfoundry/app-record-replay
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       metricsinfluxdb:
-        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
+        repository: dockerproxy.net/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rfidllrpinventory:
-        repository: nexus3.edgexfoundry.org:10004/app-rfid-llrp-inventory
+        repository: dockerproxy.net/edgexfoundry/app-rfid-llrp-inventory
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       mqttexport:
-        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
+        repository: dockerproxy.net/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       httpexport:
-        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
+        repository: dockerproxy.net/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       externalmqtttrigger:
-        repository: nexus3.edgexfoundry.org:10004/app-service-configurable
+        repository: dockerproxy.net/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     device:
       virtual:
-        repository: nexus3.edgexfoundry.org:10004/device-virtual
+        repository: dockerproxy.net/edgexfoundry/device-virtual
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rest:
-        repository: nexus3.edgexfoundry.org:10004/device-rest
+        repository: dockerproxy.net/edgexfoundry/device-rest
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       onvifcamera:
-        repository: nexus3.edgexfoundry.org:10004/device-onvif-camera
+        repository: dockerproxy.net/edgexfoundry/device-onvif-camera
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       usbcamera:
-        repository: nexus3.edgexfoundry.org:10004/device-usb-camera
+        repository: dockerproxy.net/edgexfoundry/device-usb-camera
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       mqtt:
-        repository: nexus3.edgexfoundry.org:10004/device-mqtt
+        repository: dockerproxy.net/edgexfoundry/device-mqtt
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       modbus:
-        repository: nexus3.edgexfoundry.org:10004/device-modbus
+        repository: dockerproxy.net/edgexfoundry/device-modbus
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       bacnet:
-        repository: nexus3.edgexfoundry.org:10004/device-bacnet
+        repository: dockerproxy.net/edgexfoundry/device-bacnet
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       coap:
-        repository: nexus3.edgexfoundry.org:10004/device-coap
+        repository: dockerproxy.net/edgexfoundry/device-coap
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       snmp:
-        repository: nexus3.edgexfoundry.org:10004/device-snmp
+        repository: dockerproxy.net/edgexfoundry/device-snmp
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rfidllrp:
-        repository: nexus3.edgexfoundry.org:10004/device-rfid-llrp
+        repository: dockerproxy.net/edgexfoundry/device-rfid-llrp
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       gpio:
-        repository: nexus3.edgexfoundry.org:10004/device-gpio
+        repository: dockerproxy.net/edgexfoundry/device-gpio
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     ui:
-      repository: nexus3.edgexfoundry.org:10004/edgex-ui
+      repository: dockerproxy.net/edgexfoundry/edgex-ui
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     consul:
@@ -224,15 +224,15 @@ edgex:
       tag: "1.14.5"
       pullPolicy: IfNotPresent
     bootstrapper:
-      repository: nexus3.edgexfoundry.org:10004/security-bootstrapper
+      repository: dockerproxy.net/edgexfoundry/security-bootstrapper
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     proxysetup:
-      repository: nexus3.edgexfoundry.org:10004/security-proxy-setup
+      repository: dockerproxy.net/edgexfoundry/security-proxy-setup
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     secretstoresetup:
-      repository: nexus3.edgexfoundry.org:10004/security-secretstore-setup
+      repository: dockerproxy.net/edgexfoundry/security-secretstore-setup
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     modbussimulator:
