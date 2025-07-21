@@ -212,7 +212,7 @@ edgex:
       tag: "1.16.2"
       pullPolicy: IfNotPresent
     redis:
-      repository: redis
+      repository: domain:5000/redis
       tag: "7.0.14-alpine"
       pullPolicy: IfNotPresent
     ekuiper:
@@ -240,11 +240,11 @@ edgex:
       tag: "latest"
       pullPolicy: IfNotPresent
     mqttbroker:
-      repository: eclipse-mosquitto
-      tag: "2.0.18"
+      repository: domain:5000/eclipse-mosquitto
+      tag: "2.0.21"
       pullPolicy: IfNotPresent
     natsserver:
-      repository: nats
+      repository: domain:5000/nats
       tag: "2.9.23-alpine"
       pullPolicy: IfNotPresent
 
