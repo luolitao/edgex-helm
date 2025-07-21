@@ -101,114 +101,114 @@ edgex:
   image:
     core:
       common_config:
-        repository: dockerproxy.net/edgexfoundry/core-common-config-bootstrapper
+        repository: domain:5000/edgexfoundry/core-common-config-bootstrapper
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       command:
-        repository: dockerproxy.net/edgexfoundry/core-command
+        repository: domain:5000/edgexfoundry/core-command
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       data:
-        repository: dockerproxy.net/edgexfoundry/core-data
+        repository: domain:5000/edgexfoundry/core-data
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       metadata:
-        repository: dockerproxy.net/edgexfoundry/core-metadata
+        repository: domain:5000/edgexfoundry/core-metadata
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     support:
       notifications:
-        repository: dockerproxy.net/edgexfoundry/support-notifications
+        repository: domain:5000/edgexfoundry/support-notifications
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       scheduler:
-        repository: dockerproxy.net/edgexfoundry/support-scheduler
+        repository: domain:5000/edgexfoundry/support-scheduler
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     appservice:
       rules:
-        repository: dockerproxy.net/edgexfoundry/app-service-configurable
+        repository: domain:5000/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       appsample:
-        repository: dockerproxy.net/edgexfoundry/app-service-configurable
+        repository: domain:5000/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       apprecordreplay:
-        repository: dockerproxy.net/edgexfoundry/app-record-replay
+        repository: domain:5000/edgexfoundry/app-record-replay
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       metricsinfluxdb:
-        repository: dockerproxy.net/edgexfoundry/app-service-configurable
+        repository: domain:5000/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rfidllrpinventory:
-        repository: dockerproxy.net/edgexfoundry/app-rfid-llrp-inventory
+        repository: domain:5000/edgexfoundry/app-rfid-llrp-inventory
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       mqttexport:
-        repository: dockerproxy.net/edgexfoundry/app-service-configurable
+        repository: domain:5000/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       httpexport:
-        repository: dockerproxy.net/edgexfoundry/app-service-configurable
+        repository: domain:5000/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       externalmqtttrigger:
-        repository: dockerproxy.net/edgexfoundry/app-service-configurable
+        repository: domain:5000/edgexfoundry/app-service-configurable
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     device:
       virtual:
-        repository: dockerproxy.net/edgexfoundry/device-virtual
+        repository: domain:5000/edgexfoundry/device-virtual
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rest:
-        repository: dockerproxy.net/edgexfoundry/device-rest
+        repository: domain:5000/edgexfoundry/device-rest
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       onvifcamera:
-        repository: dockerproxy.net/edgexfoundry/device-onvif-camera
+        repository: domain:5000/edgexfoundry/device-onvif-camera
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       usbcamera:
-        repository: dockerproxy.net/edgexfoundry/device-usb-camera
+        repository: domain:5000/edgexfoundry/device-usb-camera
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       mqtt:
-        repository: dockerproxy.net/edgexfoundry/device-mqtt
+        repository: domain:5000/edgexfoundry/device-mqtt
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       modbus:
-        repository: dockerproxy.net/edgexfoundry/device-modbus
+        repository: domain:5000/edgexfoundry/device-modbus
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       bacnet:
-        repository: dockerproxy.net/edgexfoundry/device-bacnet
+        repository: domain:5000/edgexfoundry/device-bacnet
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       coap:
-        repository: dockerproxy.net/edgexfoundry/device-coap
+        repository: domain:5000/edgexfoundry/device-coap
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       snmp:
-        repository: dockerproxy.net/edgexfoundry/device-snmp
+        repository: domain:5000/edgexfoundry/device-snmp
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       rfidllrp:
-        repository: dockerproxy.net/edgexfoundry/device-rfid-llrp
+        repository: domain:5000/edgexfoundry/device-rfid-llrp
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       gpio:
-        repository: dockerproxy.net/edgexfoundry/device-gpio
+        repository: domain:5000/edgexfoundry/device-gpio
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     ui:
-      repository: dockerproxy.net/edgexfoundry/edgex-ui
+      repository: domain:5000/edgexfoundry/edgex-ui
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     consul:
-      repository: hashicorp/consul
+      repository: domain:5000/hashicorp/consul
       tag: "1.16.2"
       pullPolicy: IfNotPresent
     redis:
@@ -216,23 +216,23 @@ edgex:
       tag: "7.0.14-alpine"
       pullPolicy: IfNotPresent
     ekuiper:
-      repository: lfedge/ekuiper
-      tag: "1.11.4-alpine"
+      repository: domain:5000/lfedge/ekuiper
+      tag: "1.14.3-full"
       pullPolicy: IfNotPresent
     vault:
-      repository: hashicorp/vault
+      repository: domain:5000/hashicorp/vault
       tag: "1.14.5"
       pullPolicy: IfNotPresent
     bootstrapper:
-      repository: dockerproxy.net/edgexfoundry/security-bootstrapper
+      repository: domain:5000/edgexfoundry/security-bootstrapper
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     proxysetup:
-      repository: dockerproxy.net/edgexfoundry/security-proxy-setup
+      repository: domain:5000/edgexfoundry/security-proxy-setup
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     secretstoresetup:
-      repository: dockerproxy.net/edgexfoundry/security-secretstore-setup
+      repository: domain:5000/edgexfoundry/security-secretstore-setup
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     modbussimulator:
