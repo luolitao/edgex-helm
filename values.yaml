@@ -16,7 +16,7 @@ expose:
       command: ClusterIP
       data:  ClusterIP
       metadata: ClusterIP
-      keeper: ClusterIP
+      keeper: LoadBalancer
     support:
       notifications: ClusterIP
       scheduler: ClusterIP
@@ -41,7 +41,7 @@ expose:
       snmp: ClusterIP
       rfidllrp: ClusterIP
       gpio: ClusterIP
-    ui: NodePort
+    ui: LoadBalancer
     system: ClusterIP
     #consul: NodePort
     #redis: ClusterIP
