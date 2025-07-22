@@ -101,110 +101,110 @@ edgex:
   image:
     core:
       common_config:
-        repository: domain:5000/edgexfoundry/core-common-config-bootstrapper
+        repository: domain:5000/core-common-config-bootstrapper
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       command:
-        repository: domain:5000/edgexfoundry/core-command
+        repository: domain:5000/core-command
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       data:
-        repository: domain:5000/edgexfoundry/core-data
+        repository: domain:5000/core-data
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       metadata:
-        repository: domain:5000/edgexfoundry/core-metadata
+        repository: domain:5000/core-metadata
         tag: "3.1.0"
         pullPolicy: IfNotPresent
     support:
       notifications:
-        repository: domain:5000/edgexfoundry/support-notifications
+        repository: domain:5000/support-notifications
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       scheduler:
-        repository: domain:5000/edgexfoundry/support-scheduler
+        repository: domain:5000/support-scheduler
         tag: "3.1.0"
         pullPolicy: IfNotPresent
     appservice:
       rules:
-        repository: domain:5000/edgexfoundry/app-service-configurable
+        repository: domain:5000/app-service-configurable
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       appsample:
-        repository: domain:5000/edgexfoundry/app-service-configurable
+        repository: domain:5000/app-service-configurable
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       apprecordreplay:
-        repository: domain:5000/edgexfoundry/app-record-replay
+        repository: domain:5000/app-record-replay
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       metricsinfluxdb:
-        repository: domain:5000/edgexfoundry/app-service-configurable
+        repository: domain:5000/app-service-configurable
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       rfidllrpinventory:
-        repository: domain:5000/edgexfoundry/app-rfid-llrp-inventory
+        repository: domain:5000/app-rfid-llrp-inventory
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       mqttexport:
-        repository: domain:5000/edgexfoundry/app-service-configurable
+        repository: domain:5000/app-service-configurable
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       httpexport:
-        repository: domain:5000/edgexfoundry/app-service-configurable
+        repository: domain:5000/app-service-configurable
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       externalmqtttrigger:
-        repository: domain:5000/edgexfoundry/app-service-configurable
+        repository: domain:5000/app-service-configurable
         tag: "3.1.0"
         pullPolicy: IfNotPresent
     device:
       virtual:
-        repository: domain:5000/edgexfoundry/device-virtual
+        repository: domain:5000/device-virtual
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       rest:
-        repository: domain:5000/edgexfoundry/device-rest
+        repository: domain:5000/device-rest
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       onvifcamera:
-        repository: domain:5000/edgexfoundry/device-onvif-camera
+        repository: domain:5000/device-onvif-camera
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       usbcamera:
-        repository: domain:5000/edgexfoundry/device-usb-camera
+        repository: domain:5000/device-usb-camera
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       mqtt:
-        repository: domain:5000/edgexfoundry/device-mqtt
+        repository: domain:5000/device-mqtt
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       modbus:
-        repository: domain:5000/edgexfoundry/device-modbus
+        repository: domain:5000/device-modbus
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       bacnet:
-        repository: domain:5000/edgexfoundry/device-bacnet
+        repository: domain:5000/device-bacnet
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       coap:
-        repository: domain:5000/edgexfoundry/device-coap
+        repository: domain:5000/device-coap
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       snmp:
-        repository: domain:5000/edgexfoundry/device-snmp
+        repository: domain:5000/device-snmp
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       rfidllrp:
-        repository: domain:5000/edgexfoundry/device-rfid-llrp
+        repository: domain:5000/device-rfid-llrp
         tag: "3.1.0"
         pullPolicy: IfNotPresent
       gpio:
-        repository: domain:5000/edgexfoundry/device-gpio
+        repository: domain:5000/device-gpio
         tag: "3.1.0"
         pullPolicy: IfNotPresent
     ui:
-      repository: domain:5000/edgexfoundry/edgex-ui
+      repository: domain:5000/edgex-ui
       tag: "3.1.0"
       pullPolicy: IfNotPresent
     consul:
@@ -224,15 +224,15 @@ edgex:
       tag: "1.14.5"
       pullPolicy: IfNotPresent
     bootstrapper:
-      repository: domain:5000/edgexfoundry/security-bootstrapper
+      repository: domain:5000/security-bootstrapper
       tag: "3.1.0"
       pullPolicy: IfNotPresent
     proxysetup:
-      repository: domain:5000/edgexfoundry/security-proxy-setup
+      repository: domain:5000/security-proxy-setup
       tag: "3.1.0"
       pullPolicy: IfNotPresent
     secretstoresetup:
-      repository: domain:5000/edgexfoundry/security-secretstore-setup
+      repository: domain:5000/security-secretstore-setup
       tag: "3.1.0"
       pullPolicy: IfNotPresent
     modbussimulator:
