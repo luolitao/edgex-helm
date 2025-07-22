@@ -16,6 +16,7 @@ expose:
       command: ClusterIP
       data:  ClusterIP
       metadata: ClusterIP
+      keeper: ClusterIP
     support:
       notifications: ClusterIP
       scheduler: ClusterIP
@@ -42,8 +43,9 @@ expose:
       gpio: ClusterIP
     ui: NodePort
     system: ClusterIP
-    consul: NodePort
-    redis: ClusterIP
+    #consul: NodePort
+    #redis: ClusterIP
+    datebase: ClusterIP
     ekuiper: ClusterIP
     modbussimulator: ClusterIP
     mqttbroker: ClusterIP
@@ -62,6 +64,7 @@ edgex:
       command: edgex-core-command
       data: edgex-core-data
       metadata: edgex-core-metadata
+      keeper: edgex-core-keeper
     support:
       notifications: edgex-support-notifications
       scheduler: edgex-support-scheduler
@@ -87,8 +90,9 @@ edgex:
       rfidllrp: edgex-device-rfid-llrp
       gpio: edgex-device-gpio
     ui: edgex-ui
-    consul: edgex-core-consul
-    redis: edgex-redis
+    #consul: edgex-core-consul
+    #redis: edgex-redis
+    database: edgex-postgres
     ekuiper: edgex-kuiper
     vault: edgex-vault
     bootstrapper: edgex-security-bootstrapper
@@ -116,6 +120,10 @@ edgex:
         repository: domain:5000/edgexfoundry/core-metadata
         tag: "4.0.0"
         pullPolicy: IfNotPresent
+      keeper:
+        repository: domain:5000/edgexfoundry/core-keeper
+        tag: "4.0.0"
+        pullPolicy: IfNotPresent        
     support:
       notifications:
         repository: domain:5000/edgexfoundry/support-notifications
@@ -207,13 +215,17 @@ edgex:
       repository: domain:5000/edgexfoundry/edgex-ui
       tag: "4.0.0"
       pullPolicy: IfNotPresent
-    consul:
-      repository: domain:5000/hashicorp/consul
-      tag: "1.16.2"
-      pullPolicy: IfNotPresent
-    redis:
-      repository: domain:5000/redis
-      tag: "7.0.14-alpine"
+    # consul:
+      # repository: domain:5000/hashicorp/consul
+      # tag: "1.16.2"
+      # pullPolicy: IfNotPresent
+    # redis:
+      # repository: domain:5000/redis
+      # tag: "7.0.14-alpine"
+      # pullPolicy: IfNotPresent
+    database:
+      repository: domain:5000/postgres
+      tag: "16.3-alpine3.20"
       pullPolicy: IfNotPresent
     ekuiper:
       repository: domain:5000/lfedge/ekuiper
@@ -254,6 +266,7 @@ edgex:
       data: 59880
       metadata: 59881
       command: 59882
+      keeper: 59800
     support:
       notifications: 59860
       scheduler: 59861
@@ -309,6 +322,7 @@ edgex:
       command: 1
       data: 1
       metadata: 1
+      keeper: 1
     support:
       notifications: 1
       scheduler: 1
@@ -335,8 +349,9 @@ edgex:
       gpio: 0
     ui: 1
     system: 1
-    consul: 1
-    redis: 1
+    # consul: 1
+    # redis: 1
+    database: 1
     ekuiper: 1
     modbussimulator: 0
     mqttbroker: 0
