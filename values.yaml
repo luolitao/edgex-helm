@@ -40,9 +40,9 @@ expose:
       snmp: ClusterIP
       rfidllrp: ClusterIP
       gpio: ClusterIP
-    ui: NodePort
+    ui: LoadBalancer
     system: ClusterIP
-    consul: NodePort
+    consul: LoadBalancer
     redis: ClusterIP
     ekuiper: ClusterIP
     modbussimulator: ClusterIP
