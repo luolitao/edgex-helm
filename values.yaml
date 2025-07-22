@@ -128,11 +128,11 @@ edgex:
     appservice:
       rules:
         repository: domain:5000/app-service-configurable
-        tag: "3.1.0"
+        tag: "3.1.1"
         pullPolicy: IfNotPresent
       appsample:
         repository: domain:5000/app-service-configurable
-        tag: "3.1.0"
+        tag: "3.1.1"
         pullPolicy: IfNotPresent
       apprecordreplay:
         repository: domain:5000/app-record-replay
@@ -140,7 +140,7 @@ edgex:
         pullPolicy: IfNotPresent
       metricsinfluxdb:
         repository: domain:5000/app-service-configurable
-        tag: "3.1.0"
+        tag: "3.1.1"
         pullPolicy: IfNotPresent
       rfidllrpinventory:
         repository: domain:5000/app-rfid-llrp-inventory
@@ -148,15 +148,15 @@ edgex:
         pullPolicy: IfNotPresent
       mqttexport:
         repository: domain:5000/app-service-configurable
-        tag: "3.1.0"
+        tag: "3.1.1"
         pullPolicy: IfNotPresent
       httpexport:
         repository: domain:5000/app-service-configurable
-        tag: "3.1.0"
+        tag: "3.1.1"
         pullPolicy: IfNotPresent
       externalmqtttrigger:
         repository: domain:5000/app-service-configurable
-        tag: "3.1.0"
+        tag: "3.1.1"
         pullPolicy: IfNotPresent
     device:
       virtual:
