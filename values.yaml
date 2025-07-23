@@ -217,7 +217,7 @@ edgex:
       pullPolicy: IfNotPresent
     ekuiper:
       repository: domain:5000/lfedge/ekuiper
-      tag: "1.11.4-alpine"
+      tag: "1.14.3-alpine"
       pullPolicy: IfNotPresent
     vault:
       repository: domain:5000/hashicorp/vault
