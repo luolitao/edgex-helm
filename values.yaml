@@ -589,7 +589,7 @@ edgex:
       requests:
         cpu: 0.5
         memory: 256Mi
-    consul:
+    keeper:
       enforceLimits: false
       limits:
         cpu: 1
@@ -597,7 +597,7 @@ edgex:
       requests:
         cpu: 0.5
         memory: 256Mi
-    redis:
+    database:
       enforceLimits: false
       limits:
         cpu: 1
@@ -675,7 +675,7 @@ edgex:
 
   features:
     # Available messagebus options: redis|mqtt|nats
-    messagebusbackend: redis
+    messagebusbackend: mqtt
     # MQTT broker address
     mqttBrokerAddress: ""
     # Writable pipeline functions HTTP export parameter URL
