@@ -25,7 +25,6 @@ expose:
     datebase: ClusterIP
     ekuiper: ClusterIP
     mqttbroker: ClusterIP
-    bootstrapper: ClusterIP
 
 # edgex defines a set of configuration properties for application-level concerns
 edgex:
@@ -45,7 +44,6 @@ edgex:
     ui: edgex-ui
     database: edgex-postgres
     ekuiper: edgex-kuiper
-    bootstrapper: edgex-security-bootstrapper
     mqttbroker: edgex-mqtt-broker
 
   # image defines configuration properties for docker-image-level concerns
@@ -67,10 +65,6 @@ edgex:
         repository: domain:5000/edgexfoundry/core-metadata
         tag: "4.0.0"
         pullPolicy: IfNotPresent
-      keeper:
-        repository: domain:5000/edgexfoundry/core-keeper
-        tag: "4.0.0"
-        pullPolicy: IfNotPresent        
     support:
       notifications:
         repository: domain:5000/edgexfoundry/support-notifications
@@ -84,6 +78,10 @@ edgex:
       repository: domain:5000/edgexfoundry/edgex-ui
       tag: "4.0.0"
       pullPolicy: IfNotPresent
+    keeper:
+      repository: domain:5000/edgexfoundry/core-keeper
+      tag: "4.0.0"
+      pullPolicy: IfNotPresent        
     database:
       repository: domain:5000/postgres
       tag: "16.3-alpine3.20"
@@ -91,10 +89,6 @@ edgex:
     ekuiper:
       repository: domain:5000/lfedge/ekuiper
       tag: "2.1"
-      pullPolicy: IfNotPresent
-    bootstrapper:
-      repository: domain:5000/edgexfoundry/security-bootstrapper
-      tag: "4.0.0"
       pullPolicy: IfNotPresent
     mqttbroker:
       repository: domain:5000/eclipse-mosquitto
@@ -115,16 +109,6 @@ edgex:
     ui: 4000
     ekuiper: 59720
     mqttbroker: 1883
-
-  # ports used by security bootstrapping for stage gating edgex init
-  bootstrap:
-    port:
-      start: 54321
-      readytorun: 54329
-      secretstoretokensready: 54322
-      databaseready: 54323
-      registryready: 54324
-      kongdbready: 54325
 
   # Duplicate default IP binding choice of docker-compose
   hostPortInternalBind: 127.0.0.1
@@ -239,14 +223,6 @@ edgex:
         cpu: 0.5
         memory: 256Mi
     ekuiper:
-      enforceLimits: false
-      limits:
-        cpu: 1
-        memory: 512Mi
-      requests:
-        cpu: 0.5
-        memory: 256Mi
-    bootstrapper:
       enforceLimits: false
       limits:
         cpu: 1
