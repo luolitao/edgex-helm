@@ -88,3 +88,4 @@ spec:
     path: "/mnt/edgex-kuiper-plugins"
     type: DirectoryOrCreate
 {{- if (gt (.Values.edgex.replicas.natsserver | int) 0) }}
+{{- end }}
