@@ -3,23 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 {{- if .Values.edgex.storage.useHostPath }}
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: edgex-db-volume
-spec:
-  storageClassName: ""
-  claimRef:
-    name: db-data
-    namespace: {{ .Release.Namespace }}
-  capacity:
-    storage: 512Mi
-  accessModes:
-    - {{.Values.edgex.storage.nonSharedVolumesAccessMode}}
-  hostPath:
-    path: "/mnt/edgex-db"
-    type: DirectoryOrCreate
----
+#
 apiVersion: v1
 kind: PersistentVolume
 metadata:
