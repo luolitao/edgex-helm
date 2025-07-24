@@ -81,4 +81,3 @@ spec:
   resources:
     requests:
       storage: 128Mi
-{{- if (gt (.Values.edgex.replicas.natsserver | int) 0) }}
