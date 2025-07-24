@@ -5,7 +5,7 @@
 apiVersion: v1
 name: EdgeX
 version: 4.0.0
-appVersion: odessa
+appVersion: odessa-test
 description: A Helm Chart for EdgeX
 keywords:
 - IoT
