@@ -37,11 +37,11 @@ edgex:
       command: edgex-core-command
       data: edgex-core-data
       metadata: edgex-core-metadata
-      keeper: edgex-core-keeper
     support:
       notifications: edgex-support-notifications
       scheduler: edgex-support-scheduler
     ui: edgex-ui
+    keeper: edgex-core-keeper
     database: edgex-postgres
     ekuiper: edgex-kuiper
     mqttbroker: edgex-mqtt-broker
@@ -101,12 +101,12 @@ edgex:
       data: 59880
       metadata: 59881
       command: 59882
-      keeper: 59800
     support:
       notifications: 59860
       scheduler: 59861
     system: 58890
     ui: 4000
+    keeper: 59800
     ekuiper: 59720
     mqttbroker: 1883
 
@@ -121,12 +121,12 @@ edgex:
       command: 1
       data: 1
       metadata: 1
-      keeper: 1
     support:
       notifications: 1
       scheduler: 1
     ui: 1
     system: 1
+    keeper: 1
     database: 1
     ekuiper: 1
     mqttbroker: 0
