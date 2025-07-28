@@ -1,0 +1,122 @@
+# Copyright (C) 2022 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    org.edgexfoundry.service: {{.Values.edgex.app.postgres}}
+  name: {{.Values.edgex.app.postgres}}
+spec:
+  replicas: {{.Values.edgex.replicas.postgres}}
+  selector:
+    matchLabels:
+      org.edgexfoundry.service: {{.Values.edgex.app.postgres}}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        org.edgexfoundry.service: {{.Values.edgex.app.postgres}}
+    spec:
+    {{- if and (eq .Values.edgex.security.enabled true) (or (eq .Values.edgex.storage.sharedVolumesAccessMode "ReadWriteOnce") (eq .Values.edgex.storage.useHostPath true))}}
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  org.edgexfoundry.service: {{ .Values.edgex.app.secretstoresetup}}
+              topologyKey: "kubernetes.io/hostname"
+    {{- end}}
+    {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- range .Values.imagePullSecrets }}
+      - name: {{ . }}
+      {{- end }}
+    {{- end }}
+      automountServiceAccountToken: false
+      containers:
+      - name: {{.Values.edgex.app.postgres}}
+        image: {{.Values.edgex.image.postgres.repository}}:{{.Values.edgex.image.postgres.tag}}
+        imagePullPolicy: {{.Values.edgex.image.postgres.pullPolicy}}
+      {{- if .Values.edgex.security.enabled }}
+        command: ["/edgex-init/postgres_wait_install.sh"]
+      {{- end}}
+        ports:
+        - containerPort: {{.Values.edgex.port.postgres}}
+          name: "postgres"
+      {{- if .Values.edgex.security.enabled }}
+        env:
+        - name: DATABASECONFIG_PATH
+          value: /run/postgres/conf
+        - name: DATABASECONFIG_NAME
+          vaule: postgres.conf
+      {{- end }}
+        envFrom:
+        - configMapRef:
+            name: edgex-common-variables
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+        startupProbe:
+          tcpSocket:
+            port: {{.Values.edgex.port.postgres}}
+          periodSeconds: 1
+          failureThreshold: 120
+        livenessProbe:
+          tcpSocket:
+            port: {{.Values.edgex.port.postgres}}
+        volumeMounts:
+        - mountPath: /data
+          name: db-data
+        {{- if .Values.edgex.security.enabled }}
+        - mountPath: /edgex-init
+          name: edgex-init
+        - mountPath: /run
+          name: run-tmp
+        - mountPath: /run/postgres/conf
+          name: postgres-config
+        - mountPath: /tmp/edgex/secrets
+          name: edgex-secrets
+        {{- end}}
+      {{- if .Values.edgex.resources.postgres.enforceLimits }}
+        resources:
+          limits:
+            memory: {{ .Values.edgex.resources.postgres.limits.memory }}
+            cpu: {{ .Values.edgex.resources.postgres.limits.cpu }}
+          requests:
+            memory: {{ .Values.edgex.resources.postgres.requests.memory }}
+            cpu: {{ .Values.edgex.resources.postgres.requests.cpu }}
+      {{- end}}
+      {{- if .Values.edgex.security.enabled }}
+        env:
+        - name: DATABASECONFIG_PATH
+          value: /run/postgres/conf
+        - name: DATABASECONFIG_NAME
+          value: postgres.conf
+      {{- end}}
+      hostname: {{.Values.edgex.app.postgres}}
+      restartPolicy: Always
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+      volumes:
+      - name: db-data
+        persistentVolumeClaim:
+          claimName: db-data
+      {{- if .Values.edgex.security.enabled }}
+      - name: edgex-init
+        persistentVolumeClaim:
+          claimName: edgex-init
+      - name: postgres-config
+        persistentVolumeClaim:
+          claimName: postgres-config
+      - name: edgex-secrets
+        persistentVolumeClaim:
+          claimName: edgex-secrets
+      - name: run-tmp
+        emptyDir:
+          medium: Memory
+          sizeLimit: 64Mi
+      {{- end}}

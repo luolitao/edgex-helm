@@ -88,7 +88,7 @@ edgex:
       pullPolicy: IfNotPresent
     ekuiper:
       repository: domain:5000/lfedge/ekuiper
-      tag: "2.1"
+      tag: "2.1.5"
       pullPolicy: IfNotPresent
     mqttbroker:
       repository: domain:5000/eclipse-mosquitto
