@@ -50,36 +50,36 @@ edgex:
   image:
     core:
       common_config:
-        repository: domain:5000/edgexfoundry/core-common-config-bootstrapper
+        repository: domain:5000/edgex/core-common-config-bootstrapper
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       command:
-        repository: domain:5000/edgexfoundry/core-command
+        repository: domain:5000/edgex/core-command
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       data:
-        repository: domain:5000/edgexfoundry/core-data
+        repository: domain:5000/edgex/core-data
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       metadata:
-        repository: domain:5000/edgexfoundry/core-metadata
+        repository: domain:5000/edgex/core-metadata
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     support:
       notifications:
-        repository: domain:5000/edgexfoundry/support-notifications
+        repository: domain:5000/edgex/support-notifications
         tag: "4.0.0"
         pullPolicy: IfNotPresent
       scheduler:
-        repository: domain:5000/edgexfoundry/support-scheduler
+        repository: domain:5000/edgex/support-scheduler
         tag: "4.0.0"
         pullPolicy: IfNotPresent
     ui:
-      repository: domain:5000/edgexfoundry/edgex-ui
+      repository: domain:5000/edgex/edgex-ui
       tag: "4.0.0"
       pullPolicy: IfNotPresent
     keeper:
-      repository: domain:5000/edgexfoundry/core-keeper
+      repository: domain:5000/edgex/core-keeper
       tag: "4.0.0"
       pullPolicy: IfNotPresent        
     database:
@@ -92,7 +92,7 @@ edgex:
       pullPolicy: IfNotPresent
     mqttbroker:
       repository: domain:5000/eclipse-mosquitto
-      tag: "2.0.21"
+      tag: "2.0.20"
       pullPolicy: IfNotPresent
 
   # port defines configuration properties for container, target and host ports
